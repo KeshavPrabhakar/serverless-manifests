@@ -14,7 +14,7 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-      - image: us.icr.io/sn-labs-sgrraee/guestbook:v1
+      - image: appdynamics/sample-app-web
         name: guestbook-ui
         ports:
         - containerPort: 80
