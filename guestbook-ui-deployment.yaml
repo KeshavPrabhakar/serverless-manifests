@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: guestbook-ui
+  name: static-ui
 spec:
-  replicas: 4
+  replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: guestbook-ui
+      app: static-ui
   template:
     metadata:
       labels:
-        app: guestbook-ui
+        app: static-ui
     spec:
       containers:
       - image: dockersamples/static-site
-        name: guestbook-ui
+        name: static-ui
         ports:
         - containerPort: 80
