@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: static-ui
+  name: myapp-ui
 spec:
   replicas: 4
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: static-ui
+      app: myapp-ui
   template:
     metadata:
       labels:
-        app: static-ui
+        app: myapp-ui
     spec:
       containers:
-      - image: dockersamples/static-site
-        name: static-ui
+      - image: gcr.io/google-samples/hello-app:1.0
+        name: myapp-ui
         ports:
         - containerPort: 80
