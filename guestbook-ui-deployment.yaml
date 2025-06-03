@@ -14,7 +14,7 @@ spec:
         app: online-api
     spec:
       containers:
-      - image: gcr.io/google-samples/gb-frontend:v4
+      - image: docker.io/jmalloc/echo-server
         name: online-api
         ports:
         - containerPort: 80
