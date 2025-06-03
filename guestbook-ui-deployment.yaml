@@ -14,7 +14,7 @@ spec:
         app: online-api
     spec:
       containers:
-      - image: docker.io/jmalloc/echo-server
+      - image: traefik/whoami:latest
         name: online-api
         ports:
         - containerPort: 80
