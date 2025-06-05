@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: online-api
 spec:
-  replicas: 2
+  replicas: 6
   revisionHistoryLimit: 1
   selector:
     matchLabels:
